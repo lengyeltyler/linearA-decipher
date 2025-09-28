@@ -1,0 +1,7 @@
+HT10
+Line 1: KU-RA2-TA 32
+Line 2: DA-NE 2
+Line 3: KU-RA2-TE 2
+Line 4: KU-RA2-SI 10
+Line 5: KU-RA2-NE 15
+Line 6: KU-RA2 70

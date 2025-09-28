@@ -1,0 +1,6 @@
+HT7
+Line 1: QE-TU-RA 2
+Line 2: KI-RA 1
+Line 3: DA-NA-TU 1
+Line 4: TU-RU-SI 1
+Line 5: TI-RU-SI 2

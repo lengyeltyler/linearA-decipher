@@ -1,76 +1,95 @@
+#!/usr/bin/env python3
+import csv
+from pathlib import Path
+import numpy as np
 import pandas as pd
-import matplotlib.pyplot as plt
-from sklearn.preprocessing import StandardScaler
 from sklearn.cluster import KMeans
-from scipy.cluster.hierarchy import linkage, dendrogram
-import os
+from sklearn.preprocessing import StandardScaler
+import matplotlib.pyplot as plt
 
-# === Paths ===
-BASE_DIR = os.path.dirname(os.path.dirname(__file__))
-DATA_PATH = os.path.join(BASE_DIR, "outputs", "tablet_volumes.csv")
-OUT_DIR = os.path.join(BASE_DIR, "outputs")
+ROOT = Path(__file__).resolve().parents[1]
+OUT = ROOT / "outputs"
+OUT.mkdir(parents=True, exist_ok=True)
 
-# === Step 1: Load data ===
-df = pd.read_csv(DATA_PATH)
+VOL_CSV = OUT / "tablet_volumes.csv"
+RATIO_CSV = OUT / "volume_clusters.csv"
+SCATTER_PNG = OUT / "volume_clusters_scatter.png"
+DENDRO_PNG = OUT / "volume_clusters_dendrogram.png"  # left in case you want to add linkage later
 
-# Keep only grain, oil, wine rows
-triad_df = df[df["commodity"].isin(["grain", "oil", "wineA", "wineB"])].copy()
-triad_df["commodity"] = triad_df["commodity"].replace({"wineA": "wine", "wineB": "wine"})
+def main():
+    if not VOL_CSV.exists():
+        raise SystemExit(f"Missing {VOL_CSV}. Run compute_volumes_from_subs.py first.")
 
-# === Step 2: Pivot into wide format ===
-pivot = triad_df.pivot_table(
-    index="file",
-    columns="commodity",
-    values="liters",
-    aggfunc="sum",
-    fill_value=0
-).reset_index()
+    df = pd.read_csv(VOL_CSV)
 
-# Ensure consistent columns
-for col in ["grain", "oil", "wine"]:
-    if col not in pivot.columns:
-        pivot[col] = 0
+    # Keep only the three anchor commodities for ratios; everything else is ignored here
+    df["commodity_norm"] = df["commodity"].str.lower()
+    df["commodity_norm"] = df["commodity_norm"].replace({
+        "winea": "wine",
+        "wineb": "wine"
+    })
 
-# === Step 3: Normalize ratios ===
-ratio_df = pivot.copy()
-totals = ratio_df[["grain", "oil", "wine"]].sum(axis=1)
-for col in ["grain", "oil", "wine"]:
-    ratio_df[col] = ratio_df[col] / totals
+    piv = (df[df["commodity_norm"].isin(["grain","oil","wine"])]
+           .pivot_table(index="file", columns="commodity_norm", values="liters", aggfunc="sum"))
 
-# === Step 4: KMeans clustering ===
-X = ratio_df[["grain", "oil", "wine"]].values
-scaler = StandardScaler()
-X_scaled = scaler.fit_transform(X)
+    # Ensure all three columns exist; fill missing with 0
+    for col in ["grain","oil","wine"]:
+        if col not in piv.columns:
+            piv[col] = 0.0
+    piv = piv[["grain","oil","wine"]].fillna(0.0)
 
-kmeans = KMeans(n_clusters=2, random_state=42, n_init=10)
-ratio_df["cluster"] = kmeans.fit_predict(X_scaled)
+    # Drop tablets with total liters == 0 (avoid 0/0 -> NaN)
+    totals = piv.sum(axis=1)
+    good = totals > 0
+    clean = piv.loc[good].copy()
 
-# === Step 5: Save CSV ===
-ratio_df[["file", "grain", "oil", "wine", "cluster"]].to_csv(
-    os.path.join(OUT_DIR, "volume_clusters.csv"), index=False
-)
+    if clean.empty or len(clean) < 2:
+        # Not enough data to cluster; still write a simple CSV and quit gracefully
+        ratio_df = clean.copy()
+        ratio_df["total"] = ratio_df.sum(axis=1)
+        for col in ["grain","oil","wine"]:
+            ratio_df[col] = np.where(ratio_df["total"] > 0, ratio_df[col] / ratio_df["total"], 0.0)
+        ratio_df = ratio_df.drop(columns=["total"]).reset_index()
+        ratio_df["cluster"] = 0
+        ratio_df.to_csv(RATIO_CSV, index=False)
+        print(f"✔ wrote {RATIO_CSV} (no clustering: not enough tablets)")
+        return
 
-# === Step 6: Scatter plot ===
-plt.figure(figsize=(8,6))
-for c in ratio_df["cluster"].unique():
-    subset = ratio_df[ratio_df["cluster"] == c]
-    plt.scatter(subset["grain"], subset["wine"], s=100, label=f"Cluster {c}")
-plt.xlabel("Grain (normalized ratio)")
-plt.ylabel("Wine (normalized ratio)")
-plt.title("Tablet Clusters by Grain–Wine Ratio")
-plt.legend()
-plt.savefig(os.path.join(OUT_DIR, "volume_clusters_scatter.png"))
-plt.close()
+    # Ratios (safe: total > 0 by filter)
+    ratio_df = clean.copy()
+    ratio_df["total"] = ratio_df.sum(axis=1)
+    for col in ["grain","oil","wine"]:
+        ratio_df[col] = ratio_df[col] / ratio_df["total"]
+    ratio_df = ratio_df.drop(columns=["total"]).reset_index()  # columns: file, grain, oil, wine
 
-# === Step 7: Dendrogram ===
-linked = linkage(X_scaled, method="ward")
-plt.figure(figsize=(8,6))
-dendrogram(linked, labels=ratio_df["file"].values, leaf_rotation=90)
-plt.title("Hierarchical Clustering of Tablets (Grain/Oil/Wine Ratios)")
-plt.savefig(os.path.join(OUT_DIR, "volume_clusters_dendrogram.png"))
-plt.close()
+    # KMeans on standardized ratios; k=2 (triadic vs grain-dominant previously worked)
+    X = ratio_df[["grain","oil","wine"]].values
+    scaler = StandardScaler()
+    X_scaled = scaler.fit_transform(X)
 
-print("✅ Analysis complete. Files written to outputs/:")
-print(" - volume_clusters.csv")
-print(" - volume_clusters_scatter.png")
-print(" - volume_clusters_dendrogram.png")
+    k = 2 if len(ratio_df) >= 2 else 1
+    kmeans = KMeans(n_clusters=k, n_init="auto", random_state=42)
+    ratio_df["cluster"] = kmeans.fit_predict(X_scaled) if k > 1 else 0
+
+    # Write CSV
+    ratio_df.to_csv(RATIO_CSV, index=False)
+    print(f"✔ wrote {RATIO_CSV}")
+
+    # Scatter (grain vs wine; point size ~ oil share)
+    plt.figure(figsize=(6,5))
+    plt.scatter(ratio_df["grain"], ratio_df["wine"], s=200*ratio_df["oil"]+30, alpha=0.8)
+    for _, row in ratio_df.iterrows():
+        plt.annotate(row["file"].replace(".txt",""), (row["grain"], row["wine"]), xytext=(3,3), textcoords="offset points")
+    plt.xlabel("Grain share")
+    plt.ylabel("Wine share")
+    plt.title("Tablet commodity share (size = Oil share)")
+    plt.grid(True, linestyle=":")
+    plt.tight_layout()
+    plt.savefig(SCATTER_PNG, dpi=150)
+    plt.close()
+    print(f"✔ saved {SCATTER_PNG}")
+
+    # (Optional) Dendrogram placeholder: not computing linkage here; keep file absent by default.
+
+if __name__ == "__main__":
+    main()

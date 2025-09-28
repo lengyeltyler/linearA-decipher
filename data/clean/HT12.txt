@@ -1,0 +1,7 @@
+HT12
+Line 1: OLIV 5
+Line 2: QA+TU 8
+Line 3: QE-TU-NE 30
+Line 4: DA-I 50
+Line 5: MA+RU 10
+Line 6: KU-RA2 28

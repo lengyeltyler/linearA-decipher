@@ -1,0 +1,6 @@
+HT8
+Line 1: OLIV+KI 10
+Line 2: PA3 3
+Line 3: SUP+? 1
+Line 4: QA-KI 5
+Line 5: KU-RA 2

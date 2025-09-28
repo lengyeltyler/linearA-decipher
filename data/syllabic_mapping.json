@@ -1,0 +1,27 @@
+{
+  "OLIV":    { "commodity": "oil",       "unit": "small_jar",    "confidence": "high" },
+  "OLIV+KI": { "commodity": "oil",       "unit": "small_jar",    "confidence": "high" },
+
+  "VIN+TE":  { "commodity": "wine",      "unit": "amphoraB",     "confidence": "medium" },
+
+  "PA3":     { "commodity": "commodity?", "unit": "unit?",        "confidence": "low" },
+  "SUP+?":   { "commodity": "commodity?", "unit": "unit?",        "confidence": "low" },
+  "QA-KI":   { "commodity": "commodity?", "unit": "amphoraA",     "confidence": "low" },
+  "KU-RA":   { "commodity": "commodity?", "unit": "unit?",        "confidence": "low" },
+
+  "KU-RA2-TA": { "commodity": "commodity?", "unit": "large_measure", "confidence": "low" },
+  "KU-RA2-TE": { "commodity": "commodity?", "unit": "large_measure", "confidence": "low" },
+  "KU-RA2-SI": { "commodity": "commodity?", "unit": "large_measure", "confidence": "low" },
+  "KU-RA2-NE": { "commodity": "commodity?", "unit": "large_measure", "confidence": "low" },
+  "KU-RA2":    { "commodity": "commodity?", "unit": "large_measure", "confidence": "low" },
+
+  "QE-TU-RA": { "commodity": "commodity?", "unit": "unit?",      "confidence": "low" },
+  "KI-RA":    { "commodity": "commodity?", "unit": "unit?",      "confidence": "low" },
+  "DA-NA-TU": { "commodity": "commodity?", "unit": "unit?",      "confidence": "low" },
+  "TU-RU-SI": { "commodity": "commodity?", "unit": "unit?",      "confidence": "low" },
+  "TI-RU-SI": { "commodity": "commodity?", "unit": "unit?",      "confidence": "low" },
+
+  "QE-TU-NE": { "commodity": "commodity?", "unit": "large_measure", "confidence": "low" },
+  "DA-I":     { "commodity": "commodity?", "unit": "unit?",         "confidence": "low" },
+  "MA+RU":    { "commodity": "commodity?", "unit": "unit?",         "confidence": "low" }
+}

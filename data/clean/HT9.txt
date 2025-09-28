@@ -1,0 +1,7 @@
+HT9
+Line 1: VIN+TE 51
+Line 2: VIN+TE 25
+Line 3: VIN+TE 87
+Line 4: VIN+TE 19
+Line 5: VIN+TE 18
+Line 6: VIN+TE 130
