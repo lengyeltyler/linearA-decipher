@@ -1,4 +1,4 @@
-# Linear A — proto-decipherment pipeline
+# Linear A — proto-decipherment pipeline (i have no clue what im doing and just sending it)
 
 Reproducible pipeline that turns Linear A AB-sign tablets into structured
 “commodity in unit × number” proto-translations + volume reports.
