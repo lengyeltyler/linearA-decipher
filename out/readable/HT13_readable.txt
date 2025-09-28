@@ -1,0 +1,32 @@
+Line 1: HT 13 (AB signs)
+  → no interpretation (insufficient anchors)
+
+Line 2: 
+  → no interpretation (insufficient anchors)
+
+Line 3: Line 1: AB54 AB22 AB40 AB81 5
+  → links: AB40 AB81 | unknown: AB54 AB22
+
+Line 4: Line 2: AB28 AB03 AB59 AB67 3
+  → processing chain: AB03 AB59 | unknown: AB28 AB03, AB59 AB67
+
+Line 5: Line 3: AB51 AB24 AB22 AB09 7
+  → AB51 AB24 ≈ wine (form A) [medium]  —  AB22 AB09 ≈ amphora class (A) [medium]  —  number(s): 7 | unknown: AB24 AB22
+
+Line 6: Line 4: AB81 AB02 AB22 AB67 12
+  → AB81 AB02 ≈ grain/cereal (bulk) [high]  —  AB22 AB67 ≈ large unit / big jar [high]  —  number(s): 12 | unknown: AB02 AB22
+
+Line 7: Line 5: AB04 AB40 AB22 AB59 2
+  → links: AB40 AB22 | unknown: AB04 AB40
+
+Line 8: Line 6: AB45 AB09 AB81 AB03 4
+  → unknown: AB45 AB09, AB09 AB81, AB81 AB03
+
+Line 9: Line 7: AB28 AB51 AB24 AB41 6
+  → AB51 AB24 ≈ wine (form A) [medium]  —  number(s): 6
+
+Line 10: Line 8: AB81 AB79 AB30 AB22 8
+  → no interpretation (insufficient anchors)
+
+Line 11: Line 9: AB54 AB67 AB22 AB03 5
+  → AB54 AB67 ≈ oil (olive oil) [high]  —  AB22 AB03 ≈ small unit / small jar [high]  —  number(s): 5 | unknown: AB67 AB22

@@ -1,0 +1,16 @@
+file,line,commodities,triad_grain_oil_wine,num_sequences
+HT13.txt,5,wineA,False,1
+HT13.txt,6,grain,False,1
+HT13.txt,7,commodity?,False,1
+HT13.txt,11,oil,False,1
+HT31.txt,4,oil,False,1
+HT31.txt,7,grain,False,1
+HT31.txt,9,grain,False,1
+HT31.txt,12,commodity?,False,1
+HT31.txt,13,wineB,False,1
+HT31.txt,15,commodity?,False,1
+HT95.txt,4,oil,False,1
+HT95.txt,7,grain,False,1
+ZA10.txt,4,prestige?,False,1
+ZA10.txt,5,prestige?,False,1
+ZA10.txt,8,grain,False,1

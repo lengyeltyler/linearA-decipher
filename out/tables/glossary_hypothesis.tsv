@@ -1,0 +1,29 @@
+token	role	hypothesis	confidence	evidence
+AB81 AB02	commodity	grain/cereal (bulk)	high	high counts (9–12); staples cluster; pairs with AB22 AB67
+AB54 AB67	commodity	oil (olive oil)	high	always small numbers; pairs with AB22 AB03; oil cluster
+AB51 AB24	commodity	wine (form A)	medium	pairs with AB22 AB09; 7-units pattern
+AB51 AB45	commodity	wine (form B)	medium	pairs with AB22 AB59; 8-units pattern
+AB28 AB51	container	vessel/jar class	medium	recurs with AB24 AB41 & AB51 AB24 bundle
+AB24 AB41	container	vessel/jar class	medium	recurs with AB28 AB51 & AB51 AB24 bundle
+AB28 AB67	container	vessel class (large)	medium	pairs with AB22 AB54 (measure)
+AB03 AB59	process	stage link (blend/press?)	low	in AB03↔AB59↔AB67 chain
+AB59 AB28	process	stage link (decant/store?)	low	in AB28 AB03 + AB59 AB28 bundle
+AB09 AB45	process	stage 1 (must/press?)	medium	AB09→AB45→AB59→AB04 chain, wine cluster side
+AB45 AB59	process	stage 2 (refine/filter?)	medium	chain middle node
+AB59 AB04	process	stage 3 (finished good?)	medium	chain endpoint
+AB30 AB22	livestock	group/pen marker	low	bundles with AB79 AB30 + AB81 AB79
+AB79 AB30	livestock	specimen class	low	bundles with AB30 AB22 & AB81 AB79
+AB81 AB79	livestock	herd/owner tag	low	bundles with AB30 AB22 & AB79 AB30
+AB27 AB17	commodity	prestige/special (e.g., hides)	low	rare; 3-unit; with AB22 AB40
+AB04 AB69	commodity	prestige/special (e.g., metal/jewel)	low	singular 1-unit; co-occurs with staples infrequently
+AB22 AB67	unit	large unit / big jar	high	with AB81 AB02 (grain) and AB04 AB69; staples cluster
+AB22 AB03	unit	small unit / small jar	high	with AB54 AB67 (oil); 2–5 counts
+AB22 AB09	unit	amphora class (A)	medium	with AB51 AB24 (wine)
+AB22 AB59	unit	amphora class (B)	medium	with AB51 AB45 (wine) and many connectors
+AB22 AB54	unit	vessel measure (large)	low	with AB28 AB67
+AB22 AB41	unit	vessel measure (small)	low	with AB41 AB51 + AB54 AB22
+AB22 AB40	unit	measure/conversion tag	low	connects AB27 AB17 & AB40 AB81
+AB40 AB81	link	role/owner/container link	low	network bridge among specials/staples
+AB40 AB22	link	reversal/ledger linking	low	bridge for AB04 AB40 lines
+AB03 AB81	link	link to AB81 AB51 (ritual?)	low	triad with AB22 AB03
+AB81 AB51	link	ritual/recipient tag	low	triad with AB22 AB03 + AB03 AB81

@@ -1,0 +1,13 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+.env
+.DS_Store
+
+# Outputs & plots (recomputed)
+outputs/
+plots/
+
+# Optional (raw dumps you don't want public)
+data/raw/

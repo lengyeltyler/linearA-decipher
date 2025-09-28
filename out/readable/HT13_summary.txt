@@ -1,0 +1,6 @@
+Tablet HT13.txt — commodity totals:
+
+  • commodity?  2 × amphoraB
+  • grain       12 × big_jar
+  • oil         5 × small_jar
+  • wineA       7 × amphoraA

@@ -1,0 +1,22 @@
+Tablet HT13.txt — volume totals:
+  • commodity? 60.0 L
+  • grain      240.0 L
+  • oil        25.0 L
+  • wineA      210.0 L
+    → Grain:Oil:Wine ratio ≈ (9.6, 1.0, 8.4)
+
+Tablet HT31.txt — volume totals:
+  • commodity? 190.0 L
+  • grain      207.0 L
+  • oil        10.0 L
+  • wineB      240.0 L
+    → Grain:Oil:Wine ratio ≈ (20.7, 1.0, 24.0)
+
+Tablet HT95.txt — volume totals:
+  • grain      200.0 L
+  • oil        10.0 L
+
+Tablet ZA10.txt — volume totals:
+  • grain      180.0 L
+  • prestige?  23.0 L
+

@@ -1,0 +1,71 @@
+Line 1: HT 31 (AB signs)
+  → no structured sequence found
+  · —
+
+Line 2: 
+  → no structured sequence found
+  · —
+
+Line 3: Line 1: AB54 AB08 AB23 AB22 3
+  → no structured sequence found
+  · —
+
+Line 4: Line 2: AB54 AB67 AB22 AB03 2
+  → entry: oil (olive oil) (2 small unit / small jar)
+  · AB54 AB67 ≈ oil (olive oil) [high] — AB22 AB03 ≈ small unit / small jar [high] — count=2
+
+Line 5: Line 3: AB04 AB40 AB81 AB22 5
+  → no structured sequence found
+  · —
+
+Line 6: Line 4: AB28 AB51 AB24 AB41 4
+  → no structured sequence found
+  · —
+
+Line 7: Line 5: AB81 AB02 AB22 AB67 10
+  → entry: grain/cereal (bulk) (10 large unit / big jar)
+  · AB81 AB02 ≈ grain/cereal (bulk) [high] — AB22 AB67 ≈ large unit / big jar [high] — count=10
+
+Line 8: Line 6: AB09 AB45 AB59 AB04 3
+  → no structured sequence found
+  · —
+
+Line 9: Line 7: AB81 AB02 AB22 AB28 7
+  → entry: grain/cereal (bulk) (7 unit?)
+  · AB81 AB02 ≈ grain/cereal (bulk) [high] — AB22 AB28 (unit?) — count=7
+
+Line 10: Line 8: AB40 AB09 AB45 AB22 6
+  → no structured sequence found
+  · —
+
+Line 11: Line 9: AB22 AB03 AB81 AB51 4
+  → no structured sequence found
+  · —
+
+Line 12: Line 10: AB54 AB28 AB22 AB09 5
+  → entry: commodity? (5 amphora class (A))
+  · AB54 AB28 (unknown) — AB22 AB09 ≈ amphora class (A) [medium] — count=5
+
+Line 13: Line 11: AB51 AB45 AB22 AB59 8
+  → entry: wine (form B) (8 amphora class (B))
+  · AB51 AB45 ≈ wine (form B) [medium] — AB22 AB59 ≈ amphora class (B) [medium] — count=8
+
+Line 14: Line 12: AB03 AB40 AB28 AB81 2
+  → no structured sequence found
+  · —
+
+Line 15: Line 13: AB28 AB67 AB22 AB54 4
+  → entry: vessel class (large) (4 vessel measure (large))
+  · AB28 AB67 ≈ vessel class (large) [medium] — AB22 AB54 ≈ vessel measure (large) [low] — count=4
+
+Line 16: Line 14: AB45 AB09 AB81 AB40 7
+  → no structured sequence found
+  · —
+
+Line 17: Line 15: AB54 AB22 AB41 AB51 3
+  → no structured sequence found
+  · —
+
+Line 18: Line 16: AB22 AB59 AB28 AB03 6
+  → no structured sequence found
+  · —

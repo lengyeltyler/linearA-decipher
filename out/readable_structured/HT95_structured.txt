@@ -1,0 +1,31 @@
+Line 1: HT 95 (AB signs)
+  → no structured sequence found
+  · —
+
+Line 2: 
+  → no structured sequence found
+  · —
+
+Line 3: Line 1: AB54 AB08 AB23 AB22 3
+  → no structured sequence found
+  · —
+
+Line 4: Line 2: AB54 AB67 AB22 AB03 2
+  → entry: oil (olive oil) (2 small unit / small jar)
+  · AB54 AB67 ≈ oil (olive oil) [high] — AB22 AB03 ≈ small unit / small jar [high] — count=2
+
+Line 5: Line 3: AB04 AB40 AB81 AB22 5
+  → no structured sequence found
+  · —
+
+Line 6: Line 4: AB28 AB51 AB24 AB41 4
+  → no structured sequence found
+  · —
+
+Line 7: Line 5: AB81 AB02 AB22 AB67 10
+  → entry: grain/cereal (bulk) (10 large unit / big jar)
+  · AB81 AB02 ≈ grain/cereal (bulk) [high] — AB22 AB67 ≈ large unit / big jar [high] — count=10
+
+Line 8: Line 6: AB09 AB45 AB59 AB04 3
+  → no structured sequence found
+  · —

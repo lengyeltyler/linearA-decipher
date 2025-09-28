@@ -1,0 +1,8 @@
+Tablet HT31.txt — commodity totals:
+
+  • commodity?  5 × amphoraA
+  • commodity?  4 × large_measure
+  • grain       10 × big_jar
+  • grain       7 × unit?
+  • oil         2 × small_jar
+  • wineB       8 × amphoraB

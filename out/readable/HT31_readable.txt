@@ -1,0 +1,53 @@
+Line 1: HT 31 (AB signs)
+  → no interpretation (insufficient anchors)
+
+Line 2: 
+  → no interpretation (insufficient anchors)
+
+Line 3: Line 1: AB54 AB08 AB23 AB22 3
+  → unknown: AB54 AB08, AB08 AB23, AB23 AB22
+
+Line 4: Line 2: AB54 AB67 AB22 AB03 2
+  → AB54 AB67 ≈ oil (olive oil) [high]  —  AB22 AB03 ≈ small unit / small jar [high]  —  number(s): 2 | unknown: AB67 AB22
+
+Line 5: Line 3: AB04 AB40 AB81 AB22 5
+  → links: AB40 AB81 | unknown: AB04 AB40, AB81 AB22
+
+Line 6: Line 4: AB28 AB51 AB24 AB41 4
+  → AB51 AB24 ≈ wine (form A) [medium]  —  number(s): 4
+
+Line 7: Line 5: AB81 AB02 AB22 AB67 10
+  → AB81 AB02 ≈ grain/cereal (bulk) [high]  —  AB22 AB67 ≈ large unit / big jar [high]  —  number(s): 10 | unknown: AB02 AB22
+
+Line 8: Line 6: AB09 AB45 AB59 AB04 3
+  → processing chain: AB09 AB45 → AB45 AB59 → AB59 AB04
+
+Line 9: Line 7: AB81 AB02 AB22 AB28 7
+  → AB81 AB02 ≈ grain/cereal (bulk) [high]  —  number(s): 7 | unknown: AB02 AB22, AB22 AB28
+
+Line 10: Line 8: AB40 AB09 AB45 AB22 6
+  → processing chain: AB09 AB45 | unknown: AB40 AB09, AB45 AB22
+
+Line 11: Line 9: AB22 AB03 AB81 AB51 4
+  → links: AB03 AB81, AB81 AB51
+
+Line 12: Line 10: AB54 AB28 AB22 AB09 5
+  → unknown: AB54 AB28, AB28 AB22
+
+Line 13: Line 11: AB51 AB45 AB22 AB59 8
+  → AB51 AB45 ≈ wine (form B) [medium]  —  AB22 AB59 ≈ amphora class (B) [medium]  —  number(s): 8 | unknown: AB45 AB22
+
+Line 14: Line 12: AB03 AB40 AB28 AB81 2
+  → unknown: AB03 AB40, AB40 AB28, AB28 AB81
+
+Line 15: Line 13: AB28 AB67 AB22 AB54 4
+  → unknown: AB67 AB22
+
+Line 16: Line 14: AB45 AB09 AB81 AB40 7
+  → unknown: AB45 AB09, AB09 AB81, AB81 AB40
+
+Line 17: Line 15: AB54 AB22 AB41 AB51 3
+  → unknown: AB54 AB22, AB41 AB51
+
+Line 18: Line 16: AB22 AB59 AB28 AB03 6
+  → processing chain: AB59 AB28 | unknown: AB28 AB03

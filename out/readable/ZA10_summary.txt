@@ -1,0 +1,5 @@
+Tablet ZA10.txt — commodity totals:
+
+  • grain       9 × big_jar
+  • prestige?   1 × big_jar
+  • prestige?   3 × measure_tag

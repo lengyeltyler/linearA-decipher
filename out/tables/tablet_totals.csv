@@ -1,0 +1,16 @@
+file,commodity,unit,n
+HT13.txt,commodity?,amphoraB,2
+HT13.txt,grain,big_jar,12
+HT13.txt,oil,small_jar,5
+HT13.txt,wineA,amphoraA,7
+HT31.txt,commodity?,amphoraA,5
+HT31.txt,commodity?,large_measure,4
+HT31.txt,grain,big_jar,10
+HT31.txt,grain,unit?,7
+HT31.txt,oil,small_jar,2
+HT31.txt,wineB,amphoraB,8
+HT95.txt,grain,big_jar,10
+HT95.txt,oil,small_jar,2
+ZA10.txt,grain,big_jar,9
+ZA10.txt,prestige?,big_jar,1
+ZA10.txt,prestige?,measure_tag,3
